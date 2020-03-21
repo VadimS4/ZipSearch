@@ -11,19 +11,17 @@ class App extends React.Component {
     }
   }
 
-  handleSubmit(event) {
+  handleSubmit = (event) => {
     event.preventDefault();
-    console.log("This event has been submitted");
+    console.log(this.state);
   }
 
-  handleChange(event) {
-    console.log(event.target.value)
-    // this.setState({
-    //   searchTerm: event.target.value
-    // })
+  handleChange = (event) => {
+    this.setState({searchTerm: event.target.value})
   }
 
   render() {
+    console.log(this.state);
     return (
       <div className="App">
         <Search handleSubmit={this.handleSubmit} handleChange={this.handleChange}/>

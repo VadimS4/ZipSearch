@@ -5,14 +5,14 @@ const Search = (props) => {
     return (
         <div className="searchBar">
             <h1 className="title">ZipSearch</h1>
-            <form className="inputForm" onSubmit={(event) => this.handleSubmit(event)}>
+            <form className="inputForm" onSubmit={(ev) => props.handleSubmit(ev)}>
                 <input
                     type="text"
                     className="search"
-                    id="searchTerm"
                     placeholder="Search For..."
                     onChange={(event) => props.handleChange(event)}
                 />
+                <button className="submitButton">Search</button>
             </form>
         </div>
     )
